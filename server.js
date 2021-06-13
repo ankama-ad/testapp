@@ -6,12 +6,12 @@
 let path = require('path');
 let embedToken = require(__dirname + '/embedConfigService.js');
 const utils = require(__dirname + "/utils.js");
-// const powerbiRouter = require("../routes/powerbiEmbedRoutes");
-// const usersRoutes = require("../routes/userRoutes");
-// const deprtmentRoutes = require("../routes/departmentRoutes");
-// const feedbackRoutes = require("../routes/feedbackRoutes");
-// const reportRoutes = require("../routes/reportRoutes");
-// const requestRoutes = require("../routes/requestRoutes");
+const powerbiRouter = require("./routes/powerbiEmbedRoutes");
+const usersRoutes = require("./routes/userRoutes");
+const deprtmentRoutes = require("./routes/departmentRoutes");
+const feedbackRoutes = require("./routes/feedbackRoutes");
+const reportRoutes = require("./routes/reportRoutes");
+const requestRoutes = require("./routes/requestRoutes");
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
@@ -36,12 +36,12 @@ const port = process.env.PORT || 8080;
 //     extended: true
 // }));
 
-// app.use('/powerbi', powerbiRouter);
-// app.use('/users', usersRoutes);
-// app.use('/reports', reportRoutes);
-// app.use('/requests', requestRoutes);
-// app.use('/feedbacks', feedbackRoutes);
-// app.use('/departments', deprtmentRoutes);
+ app.use('/powerbi', powerbiRouter);
+ app.use('/users', usersRoutes);
+ app.use('/reports', reportRoutes);
+ app.use('/requests', requestRoutes);
+ app.use('/feedbacks', feedbackRoutes);
+ app.use('/departments', deprtmentRoutes);
 
 
 
