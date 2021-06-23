@@ -3,16 +3,16 @@ const Sequelize = require('sequelize');
 // Database Setup
 //
 function getContext(){
-
-const sequelize = new Sequelize('PortalDB', 'PortalAdmin', 'Portal@123', {
-    host: 'rcoedemodb.database.windows.net',
-    dialect: 'mssql',
-    dialectOptions: {
-        options: {
-            encrypt: true,
-        }
-    }
-  });
+// tcp:dbpotal,rcoedemodb
+const sequelize = new Sequelize(`PortalDB`, `PortalAdmin`, `Portal@123`, {
+  host: 'rcoedemodb.database.windows.net',
+  dialect: 'mssql',    
+  dialectOptions: {
+      options: {
+          encrypt: true,
+      }
+  }
+});  
 
 sequelize.authenticate()
   .then(() => {

@@ -190,7 +190,7 @@ async function getAccessToken () {
     let adal = require("adal-node");
 
     let AuthenticationContext = adal.AuthenticationContext;
-
+    console.log(__dirname + "/../config/config.json");
     // Create a config variable that store credentials from config.json
     let config = require(__dirname + "/../config/config.json");
     
