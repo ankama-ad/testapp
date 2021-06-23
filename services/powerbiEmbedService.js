@@ -4,7 +4,7 @@
 // ----------------------------------------------------------------------------
 
 //const auth = require(__dirname + "../src/authentication.js");
-//const config = require(__dirname + "./config/config.json");
+//const config = require(__dirname + "/../config/config.json");
 // const utils = require("../src/utils");
 const PowerBiReportDetails = require(__dirname + "/../models/embedReportConfig.js");
 const EmbedConfig = require(__dirname + "/../models/embedConfig.js");
@@ -192,7 +192,7 @@ async function getAccessToken () {
     let AuthenticationContext = adal.AuthenticationContext;
 
     // Create a config variable that store credentials from config.json
-    let config = require(__dirname + "./config/config.json");
+    let config = require(__dirname + "/../config/config.json");
     
     //let constants =  require("../api/contants");
     // config = await constants.fillConstants(config);

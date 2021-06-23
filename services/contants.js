@@ -10,12 +10,9 @@ exports.fillConstants = async (model) => {
             }
     }
     });
-    
-    console.log('model',model,keys, items);
+       
     items.forEach((i) => {
-      model[i.ConstantName] = i.ConstantValue;
+      model[i.constantName] = i.constantValue;
     });
-    console.log('******************* after update ***********************');
-    console.log('after update',model,keys, items);
     return model;
 };

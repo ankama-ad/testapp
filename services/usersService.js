@@ -4,8 +4,8 @@ const { Op } = require("sequelize");
 exports.getUsers = async () => {
    
     // join  report 
-    let users = await contex.getContext().Users.findAll({
-        where: {   IsActive:{ [Op.eq]: true } }       
+    let users = await contex.getContext().users.findAll({
+        where: {   isActive:{ [Op.eq]: true } }       
     });
     console.log("items users", users);
     return users;

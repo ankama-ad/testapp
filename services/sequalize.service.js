@@ -3,23 +3,23 @@ const Sequelize = require('sequelize');
 // Database Setup
 //
 function getContext(){
-// tcp:dbpotal,rcoedemodb
-const sequelize = new Sequelize('PortaDB', 'portalAdmin', 'Portal@123', {
-    host: 'dbpotal.database.windows.net',
-    dialect: 'mssql',    
+
+const sequelize = new Sequelize('PortalDB', 'PortalAdmin', 'Portal@123', {
+    host: 'rcoedemodb.database.windows.net',
+    dialect: 'mssql',
     dialectOptions: {
         options: {
             encrypt: true,
         }
     }
-  });  
+  });
 
 sequelize.authenticate()
   .then(() => {
     console.log('Connection has been established successfully.');
   })
   .catch(err => {
-    console.error('Unable to connect to the database:', err);
+    console.error('Unable to connect to the database:', err);    
   });
 
 var initModels = require("../models/init-models");
